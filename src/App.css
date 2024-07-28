@@ -1,0 +1,47 @@
+/* App.css */
+
+.container {
+  text-align: center;
+  padding: 5rem;
+  font-size: 2.5rem;
+}
+
+.text-container {
+  border: none;
+  padding: 5px;
+  min-height: 30px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.placeholder-text {
+  align-items: center;
+  justify-content: center;
+  color: lightgrey;
+  font-size: inherit;
+}
+
+.streak-info {
+  padding-top: 15px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 4rem;
+    font-size: 1.5rem;
+  }
+
+  .text-container {
+    padding: 2rem;
+  }
+
+  .streak-info {
+    font-size: 2rem;
+  }
+
+  .streak-length {
+    font-size: 2.5rem;
+  }
+}
