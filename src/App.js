@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import "./App.css";
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
     };
   }, [text]);
 
-  const renderHighlightedText = () => {
+  const renderHighlightedText = useMemo(() => {
     const index = text.indexOf(streak);
     if (index === -1) {
       return text;
@@ -64,13 +64,13 @@ function App() {
         <span>{text.slice(index + streak.length)}</span>
       </>
     );
-  };
+  }, [text, streak]);
 
   return (
     <div className="container">
       <div className="text-container">
         {text === "" && <div className="placeholder-text">Start typing...</div>}
-        {renderHighlightedText()}
+        {renderHighlightedText}
       </div>
       <div className="streak-info">
         Longest even or odd streak: {streakLength}
